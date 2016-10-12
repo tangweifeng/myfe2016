@@ -3,8 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #menu .main-menu{
+            float: left;
+            width: 120px;
+            height: 30px;
+            background: gray;
+            margin-bottom: 5px;
+            text-align: center;
+            line-height: 30px;
+            margin: 5px;
+        }
+        /*#menu .sub-menu{*/
+                /*background: #cccccc;*/
+        /*}*/
+        /*#menu .sub-menu li{*/
+            /*border-bottom: solid 1px #000000;*/
+        /*}*/
+        /*#menu .sub-menu a{*/
+
+        /*}*/
+    </style>
 </head>
 <body>
-
+    <ul id="menu">
+        <li class="main-menu">
+            <a href="">link1</a>
+            <ul class="sub-menu">
+                <li><a href="">sublink1</a></li>
+                <li><a href="">sublink2</a></li>
+                <li><a href="">sublink3</a></li>
+            </ul>
+        </li>
+        <li class="main-menu">
+            <a href="">link2</a>
+            <ul class="sub-menu">
+                <li><a href="">sublink1</a></li>
+                <li><a href="">sublink2</a></li>
+                <li><a href="">sublink3</a></li>
+            </ul></li>
+        <li class="main-menu">
+            <a href="">link3</a>
+            <ul class="sub-menu">
+            <li><a href="">sublink1</a></li>
+            <li><a href="">sublink2</a></li>
+            <li><a href="">sublink3</a></li>
+        </ul>
+        </li>
+    </ul>
 </body>
 </html>
