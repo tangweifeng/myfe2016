@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        #nav {
+            height: 30px;
+        }
+
+        /*a{*/
+        /*text-decoration: none;*/
+        /*}*/
+
+        #tab {
+            /*background: red;*/
+            height: 30px;
+            width: 200px;
+            margin: 50px auto;
+        }
+
+        #nav li {
+            background: gray;
+            float: left;
+            margin-right: 5px;
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #content {
+            background: ghostwhite;
+            height: 170px;
+
+            border-top: 1px solid black;
+        }
+
+        #nav .s1 {
+            background: #000;
+            color: #ffffff;
+        }
+        #content div{
+            display: none;
+        }
+        #content  div.s2{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div id="tab">
+    <ul id="nav">
+        <li class="s1">js</li>
+        <li>html</li>
+        <li>css</li>
+    </ul>
+    <div id="content">
+        <div class="s2">1111</div>
+        <div>2222</div>
+        <div>3333</div>
+    </div>
+
+</div>
+
+<script>
+//    var data=[11111,22222,33333] ;
+    var aLi= document.getElementsByTagName('li');
+    var oContent= document.getElementById('content');
+    var aDiv = oContent.getElementsByTagName('div');
+    for(var i=0;i<aLi.length;i++){
+           aLi[i].index=i;
+       aLi[i].onclick=function(){
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className='';
+                aDiv[i].className='';
+            }
+            this.className='s1';
+           aDiv[this.index].className='s2';
+//            oContent.innerHTML = data[this.index];
+
+        }
+    }
+
+</script>
+
+
+
+</body>
+</html>
