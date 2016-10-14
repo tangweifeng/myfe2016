@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #tab{
+            background: red;
+            margin: 50px auto;
+            width: 200px;
+            height: 200px;
+        }
+        #tab .nav{
+            height: 30px;
+        }
+        #tab .nav li{
+            float: left;
+            height: 30px;
+            width: 40px;
+            background: gray;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #nav .s1 {
+            background: #000;
+            color: #ffffff;
+        }
+        #content  div.s2{
+            display: block;
+        }
+        #content div{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="tab">
+            <ul class="nav">
+                <li class="s1">js</li>
+                <li>html</li>
+                <li>css</li>
+            </ul>
+            <div id="content">
+                <div class="s2">1111</div>
+                <div>2222</div>
+                <div>3333</div>
+            </div>
+        </div>
+        <script !src="">
+            var oNav=document.getElementById('tab');
+            var aLi=oNav.getElementsByTagName('li');
+            var oContent= document.getElementById('content');
+            var aDiv=oContent.getElementsByTagName('div');
+            for (var i=0;i<aLi.length;i++){
+                      aLi[i].xx=i;
+                aLi[i].onclick=function(){
+                    for (var i=0;i<aLi.length;i++){
+                        aLi[i].className='';
+                        aDiv[i].className='';
+                    }
+                    this.className='s1';
+                    aDiv[this.xx].className='s2';
+
+
+                }
+            }
+        </script>
+</body>
+</html>
