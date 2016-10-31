@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交换两幅图片</title>
+    <style>
+
+        div{
+
+            height: 344px;
+            width: 680px;
+
+        }
+        #pic .a1{
+            display: block;
+        }
+        #pic img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="pic">
+    <img  class="a1" src="../img/1.jpg" alt="">
+    <img     src="../img/2.jpg" alt="">
+</div>
+<script !src="">
+    var oPic=document.getElementById('pic');
+    var a1=oPic.getElementsByTagName('img');
+
+for(var i=0;i<2;i++){
+    oPic.onclick=function(){
+                if(a1[0].className=='a1'){
+                    a1[0].className='';
+                    a1[1].className='a1';
+                }
+
+                else if(a1[1].className=='a1'){
+                    a1[1].className='';
+                    a1[0].className='a1';
+                }
+
+            }
+    }
+</script>
+</body>
+</html>

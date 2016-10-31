@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+        table{
+            border-collapse: collapse;
+            width: 400px;
+            height: 200px;
+        }
+        td{
+            text-align: center;
+        }
+        .even		{ background:gray;}
+        .odd		{ background:palegoldenrod;}
+        .background   { background: red;}
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><input type="checkbox" name="choice"></td><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+    <tr><td><input type="checkbox" name="choice"></td><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+    <tr><td><input type="checkbox" name="choice"></td><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+    <tr><td><input type="checkbox" name="choice"></td><td>找六</td><td>男</td><td>浙江温州</td></tr>
+    <tr><td><input type="checkbox" name="choice"></td><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+    <tr><td><input type="checkbox" name="choice"></td><td>MAXMAN</td><td>女</td><td>浙江杭州</td></tr>
+    </tbody>
+</table>
+<script src="jquery-1.12.4.js"></script>
+<script !src="">
+    $(function(){
+        $("tbody>tr:odd").addClass("odd"); //先排除第一行,然后给奇数行添加样式
+        $("tbody>tr:even").addClass("even"); //先排除第一行,然后给偶数行添加样式
+        $('tbody>tr').on('click',function(){
+            if ($(this).hasClass('background')) {
+             $(this).removeClass('background').find(':checkbox').prop('checked',false);
+             }else{
+             $(this).addClass('background').find(':checkbox').prop('checked',true);
+             }
+        })
+
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dome1</title>
+    <style>
+        .focus{
+            background: #fcc;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <fieldset>
+    <legend>个人基本信息</legend>
+        <div>
+            <label  for="username">名称:</label>
+            <input id="username" type="text" value="名称" />
+        </div>
+        <div>
+            <label  for="pass">密码:</label>
+            <input id="pass" type="password" value="密码" />
+        </div>
+        <div>
+            个人基本信息:<textarea id="msg" rows="4" cols="20">详细信息</textarea>
+        </div>
+    </fieldset>
+
+</form>
+<script src="jquery-1.12.4.js"></script>
+<script >
+        $(function(){
+            $('input,textarea').on('focus',function(){
+                $(this).addClass("focus");
+                if (this.value==this.defaultValue){
+                   this.value='';}
+            }).blur(function(){
+                $(this).removeClass("focus");
+                if ($(this).val()=='')
+                {this.value=this.defaultValue}
+            });
+        })
+</script>
+</body>
+</html>

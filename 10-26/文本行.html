@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本行变高边窄</title>
+</head>
+<style>
+.bigger,.smaller{
+    background: gray;
+    cursor: alias;
+}
+</style>
+<body>
+<form action="" method="post">
+    <div class="msg">
+        <div class="msg_caption">
+            <span class="bigger" >放大</span>
+            <span class="smaller" >缩小</span>
+        </div>
+        <div>
+            <textarea id="comment" rows="8" cols="20">多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.</textarea>
+        </div>
+    </div>
+</form>
+<script src="jquery-1.12.4.js"></script>
+<script !src="">
+    $(function() {
+        $('.bigger').on('click', function () {
+            if ($('#comment').height() < 300) {
+            var $height = $('#comment').height();
+            $('#comment').height($height + 50);}
+        })
+        $('.smaller').on('click', function () {
+            if ($('#comment').height() >80) {
+                var $height = $('#comment').height();
+                $('#comment').height($height - 50);}})
+    })
+</script>
+</body>
+</html>

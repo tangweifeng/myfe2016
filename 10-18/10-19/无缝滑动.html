@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滑动</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        #a{
+            background: gray;
+            height: 300px;
+            width: 400px;
+            border: 1px solid black;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        #tab{
+            width: 880px;
+            height: 200px;
+            position: absolute;
+        }
+        #tab li{
+            float: left;
+            background: red;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+        }
+        #b {
+            position: absolute;
+            left: 100px;
+            bottom: 10px;
+
+        }
+        #b span{
+            border: 1px solid black;
+            margin-right: 40px;
+            cursor: pointer;
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="a">
+            <ul id="tab">
+                <li class="">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <div id="b">
+                <span id="c">向左滑</span>
+                <span id="d">向右滑</span>
+            </div>
+        </div>
+        <script !src="">
+            var oC=document.getElementById('c');
+            var oD=document.getElementById('d');
+            var oTab =document.getElementById('tab');
+            var speed=-2;
+           /* oC.onmouseover=function(){
+
+                 setInterval(function(){
+                oTab.style.left =oTab.offsetLeft-2+'px';
+                if(oTab.offsetLeft==-oTab.offsetWidth/2){
+                oTab.style.left = 0}
+            },20)
+            };*/
+
+            /*oD.onmousemove=function(){
+                  setInterval(function(){
+
+                    if(oTab.offsetLeft==0) {
+                        oTab.style.left = -(oTab.offsetWidth / 2) + 'px';
+                    }
+             oTab.style.left=oTab.offsetLeft+2+'px';
+                },200)
+            }*/
+            setInterval(function(){
+                oTab.style.left=oTab.offsetLeft+speed+'px';
+
+                if(oTab.offsetLeft==0) {
+                    oTab.style.left = -(oTab.offsetWidth / 2) + 'px';
+                }else if(oTab.offsetLeft==-oTab.offsetWidth/2){
+                    oTab.style.left = 0;
+                }
+
+//                oTab.style.left=oTab.offsetLeft+speed+'px';
+            },50)
+            oC.onmousemove=function(){
+                speed=-2;
+            };
+            oD.onmousemove=function(){
+                speed= +2;
+            }
+
+
+            /*var oTab =document.getElementById('tab');
+            setInterval(function(){
+                if(oTab.offsetLeft==0){
+                    oTab.style.left = -oTab.offsetWidth/2+'px'}
+                oTab.style.left=oTab.offsetLeft+2+'px';
+            },20)*/
+
+
+        </script>
+</body>
+</html>

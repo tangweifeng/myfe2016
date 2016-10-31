@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     table{
+         width: 500px;
+         height: 200px;
+     }
+        tr{
+            text-align: center;
+        }
+        tr.parent{
+            background: yellow;
+            text-align: left;
+        }
+     .selected		{ background:#FF6500;color:#fff;}
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <th>姓名</th><th>性别</th><th>暂住地</th>
+    </thead>
+    <tbody>
+    <tr class="parent" id="row-01"><td colspan="3">菜单1</td></tr>
+    <tr class="child-row-01"><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+    <tr class="child-row-01"><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+
+    <tr class="parent" id="row-02"><td colspan="3">菜单2</td></tr>
+    <tr class="child-row-02"><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+    <tr class="child-row-02"><td>找六</td><td>男</td><td>浙江温州</td></tr>
+
+    <tr class="parent" id="row-03"><td colspan="3">菜单3</td></tr>
+    <tr class="child-row-03"><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+    <tr class="child-row-03"><td>M</td><td>女</td><td>浙江杭州</td></tr>
+
+
+    </tbody>
+
+</table>
+<script src="jquery-1.12.4.js"></script>
+<script !src="">
+    $(function(){
+        $('.parent').on('click',function(){
+            var  $id= $(this).prop('id');
+            $(this).toggleClass("selected").siblings('.child-'+$id).toggle();
+        });
+    })
+</script>
+</body>
+</html>

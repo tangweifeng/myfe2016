@@ -87,7 +87,9 @@
             var aS=document.getElementsByTagName('img');
             var oNext=document.getElementById('s4');
             var  oUp=document.getElementById('s3');
+            var oS =document.getElementById('s');
            var iNow=0;
+
             for (var i=0;i<aLi.length;i++){
                 aLi[i].index=i;
                 aLi[i].onmouseover=function(){//点击才会运行
@@ -97,6 +99,7 @@
                     }
                     this.className='s1';
                     aS[this.index].className='ss';
+                    iNow=this.index;
                 }
             }
             oNext.onclick=function(){
@@ -105,14 +108,14 @@
                     iNow=0;
                 }
                 for(var j=0;j<aLi.length;j++){
-                    aLi[j].className='';
-                    aS[j].className='';
-                }
-                aLi[iNow].className='s1';
-                aS[iNow].className='ss';
+                aLi[j].className='';
+                aS[j].className='';
+            }
+            aLi[iNow].className='s1';
+            aS[iNow].className='ss';
             }
             oUp.onclick=function(){
-                iNow=iNow-1
+                iNow=iNow-1;
                 if(iNow==-1){
                     iNow=aLi.length-1;
                 }
@@ -123,6 +126,18 @@
                 aLi[iNow].className='s1';
                 aS[iNow].className='ss';
             }
+            var timer = setInterval(function(){
+                oNext.onclick();
+            }, 500);
+            oS.onmouseover = function(){
+                clearInterval(timer);
+            };
+            oS.onmouseout = function(){
+                timer = setInterval(function(){
+                    oNext.onclick();
+                }, 500);
+            };
+
         </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示年·月·日</title>
+</head>
+<body>
+<p id="a"></p>
+<script !src="">
+     setInterval(function(){
+    var  date = new Date();
+    var year = date.getFullYear();
+    var month= date.getMonth()+1;
+    var day= date.getDate();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var second=date.getSeconds();
+    var xingqi = date.getDay();
+    document.getElementById('a').innerHTML=('现在是'+year+'年'+ month+'月'+ day+'日'+hour+'时'+min+'分'+second+'秒'+'('+'星期'+ xingqi+' )'+'欢迎你的到访');}
+    ,1000);
+</script>
+</body>
+</html>

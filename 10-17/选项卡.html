@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        #nav{
+            height: 20px;
+        }
+        #nav li{
+            float: left;
+            background: red;
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        #tab{
+
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+        }
+        #content{
+            background: gray;
+            width: 300px;
+            height: 150px;
+        }
+        #nav .selected{
+            background: gray;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="tab">
+    <ul id="nav">
+        <li class="selected">js</li>
+        <li>css</li>
+        <li>html</li>
+    </ul>
+    <div id="content">
+    </div>
+</div>
+<script>
+    var data = ["111111","222222","333333"];
+
+    var oNav = document.getElementById('nav');
+    var aLi = oNav.getElementsByTagName("li");
+    var oContent = document.getElementById('content');
+
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].xx = i;//aLi[0].xx=0;aLi[1].xx=1;
+        aLi[i].onclick = function(){
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].className = "";
+            }
+            this.className = 'selected';
+            oContent.innerHTML = data[this.xx];
+        }
+    }
+</script>
+</body>
+</html>

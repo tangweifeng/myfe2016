@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+              margin:0px;
+              padding: 0px;
+          }
+        ul{
+            list-style: none;
+        }
+        .main-menu{
+            float: left;
+            width: 80px;
+            height: 30px;
+            background: gray;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .sub-menu li{
+            background: greenyellow;
+            border-bottom: 1px dashed black;
+            /*text-indent: 0px;*/
+        }
+        .sub-menu{
+            display: none;
+        }
+       /* .main-menu:hover  .sub-menu{
+            display: block;
+        }*/
+    </style>
+</head>
+<body>
+<ul id="tab">
+    <li class="main-menu">link1
+        <ul class="sub-menu">
+            <li >link11</li>
+            <li>link12</li>
+            <li>link13</li>
+        </ul>
+    </li>
+    <li class="main-menu">link2
+        <ul class="sub-menu">
+        <li >link21</li>
+        <li>link22</li>
+        <li>link23</li>
+        </ul>
+    </li>
+    <li class="main-menu">link3
+        <ul class="sub-menu">
+        <li >link31</li>
+        <li>link32</li>
+        <li>link33</li>
+        </ul>
+    </li>
+</ul>
+<script>
+    var aM=document.getElementsByTagName('li');
+   for(var i=0;i<aM.length;i++){
+       if (aM[i].className=='main-menu'){
+           aM[i].onmouseover=function(){
+               var a=this.getElementsByTagName('ul')[0];
+               //console.log(a);
+               a.style.display='block';
+           }
+           aM[i].onmouseout=function(){
+               var a=this.getElementsByTagName('ul')[0];
+               a.style.display='none';
+           }
+       }
+   }
+</script>
+</body>
+</html>
