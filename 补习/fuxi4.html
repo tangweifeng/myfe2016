@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        #tab{
+            margin: 50px auto;
+            width: 500px;
+            height: 400px;
+        }
+        li{
+            float: left;
+            background: red;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        #smalltab{
+            clear: both;
+            background: gray;
+            width: 500px;
+            height: 300px;
+        }
+
+        #smalltab .selected{
+            display: block;
+        }
+        #smalltab div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<ul>
+<div id="tab">
+    <ul class="menu">
+        <li class="select">html</li>
+        <li>js</li>
+        <li>css</li>
+    </ul>
+    <div id="smalltab">
+        <div class="selected">11111</div>
+        <div>22222</div>
+        <div>33333</div>
+    </div>
+</div>
+
+</ul>
+<script !src="">
+    var oNav=document.getElementById('tab');
+    var aLi=oNav.getElementsByTagName('li');
+    var oContent= document.getElementById('smalltab');
+    var aDiv=oContent.getElementsByTagName('div');
+    for (var i=0;i<aLi.length;i++){
+        aLi[i].xx=i;
+        aLi[i].onclick=function(){
+            for (var i=0;i<aLi.length;i++){
+                aLi[i].className='';
+                aDiv[i].className='';
+            }
+            this.className='select';
+            aDiv[this.xx].className='selected';
+
+
+        }
+    }
+</script>
+</body>
+</html>

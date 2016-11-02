@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            margin: 100px auto;
+            width: 680px;
+            height: 344px;
+            position: relative;
+        }
+        #tab{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        #tab li{
+            background: gray;
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        #tab li.selected{
+            background: black;
+            color: white;
+        }
+        #img img{
+                position: absolute;
+        }
+       /* #img .selected{
+            display: block;
+        }*/
+        #span {
+
+            position: absolute;
+            left:10px;
+            bottom: 10px;
+        }
+        #span span{
+            background: gray;
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="tab">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="img">
+        <img class="selected"  src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    <div id="span">
+        <span id="s3"> < </span>
+        <span id="s4"> > </span>
+    </div>
+</div>
+<script !src="">
+    var aLi=document.getElementsByTagName('li');
+    var aImg=document.getElementsByTagName('img');
+    var oNext=document.getElementById('s4');
+    var  oUp=document.getElementById('s3');
+    var oS =document.getElementById('img');
+    var iNow=0;
+    var zIndex=4;
+    for (var i=0;i<aLi.length;i++){
+        aLi[i].index=i;
+        aLi[i].onmouseover=function(){//点击才会运行
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className='';
+            }
+            this.className='selected';
+            aImg[this.index].style.zIndex=++zIndex;
+            aImg[this.index].style.opacity=0;
+            amimate(aImg[this.index].(opacity))
+            iNow=this.index;
+        }
+    }
+    oNext.onclick=function(){
+        iNow =iNow+1;
+        if (iNow==aLi.length){
+            iNow=0;
+        }
+        for(var j=0;j<aLi.length;j++){
+            aLi[j].className='';
+            aS[j].className='';
+        }
+        aLi[iNow].className='selected';
+        aS[iNow].className='selected';
+    }
+    oUp.onclick=function(){
+        iNow=iNow-1;
+        if(iNow==-1){
+            iNow=aLi.length-1;
+        }
+        for(var j=0;j<aLi.length;j++){
+            aLi[j].className='';
+            aS[j].className='';
+        }
+        aLi[iNow].className='selected';
+        aS[iNow].className='selected';
+    }
+    var timer = setInterval(function(){
+        oNext.onclick();
+    }, 1000);
+    oS.onmouseover = function(){
+        clearInterval(timer);
+    };
+    oS.onmouseout = function(){
+        timer = setInterval(function(){
+            oNext.onclick();
+        }, 1000);
+    };
+</script>
+</body>
+</html>

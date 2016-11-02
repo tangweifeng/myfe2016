@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>一个</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        #tab{
+            background: gray;
+            width: 400px;
+        }
+       .h{
+           background: black;
+           color: white;
+       }
+        .sub-menu{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-
+<ul id="tab">
+    <li class="main-menu">
+        <h1 class="h">管理1</h1>
+        <ul class="sub-menu">
+            <li>11111</li>
+            <li>22222</li>
+            <li>33333</li>
+        </ul>
+    </li>
+    <li class="main-menu">
+        <h1 class="h">管理2</h1>
+        <ul class="sub-menu">
+            <li>111111</li>
+            <li>222222</li>
+            <li>333333</li>
+        </ul>
+    </li>
+</ul>
+<script >
+    var aH1=document.getElementsByTagName('h1');
+    var aTab=document.getElementById('tab');
+    var oSubmenu=aTab.getElementsByTagName('ul');
+    for(var i=0;i<aH1.length;i++){
+        aH1[i].index=i;
+        aH1[i].bF=false;
+        aH1[i].onclick=function() {
+            if (this.bF) {
+            oSubmenu[this.index].style.display = 'none';
+        }else
+            {
+                oSubmenu[this.index].style.display = 'block';
+            }
+            this.bF=!this.bF;
+        }
+    }
+</script>
 </body>
 </html>
