@@ -1,0 +1,277 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    width: 990px;
+    height: 105px;
+    margin: auto;
+    position: relative;
+    background: gray;
+}
+#header input{
+    position: absolute;
+    left: 200px;
+    top: 17px;
+    color: grey;
+}
+#skin{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 128px ;
+    height: 23px;
+    margin: 10px;
+    padding: 4px ;
+}
+#skin li{
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 4px;
+}
+#skin0{
+     background-image: url("../images/theme.gif") ;
+    background-repeat: no-repeat;
+ }
+#skin1{
+    background-image: url("../images/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -20px 0 ;
+}
+#skin2{
+    background-image: url("../images/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -40px 0px ;
+}
+#skin3{
+    background-image: url("../images/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -60px 0px ;
+}
+#skin4{
+    background-image: url("../images/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -80px 0px ;
+}
+#skin5{
+    background-image: url("../images/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -100px 0px;
+}
+#skin0.c{
+    background-position: 0 -15px ;
+}
+#skin1.c{
+    background-position: -20px -15px ;
+}
+#skin2.c{
+    background-position: -40px -15px ;
+}
+#skin3.c{
+    background-position: -60px -15px ;
+}
+#skin4.c{
+    background-position:-80px -15px ;
+}
+#skin5.c{
+    background-position:-100px -15px ;
+}
+#dhk .d0{
+    background: blue;
+}
+#dhk .d1{
+    background: greenyellow;
+}
+#dhk .d2{
+     background: yellow;
+ }
+#dhk .d3{
+      background: cornflowerblue;
+  }
+#dhk .d4{
+       background: red;
+   }
+#dhk .d5{
+    background: palevioletred;
+}
+#dh{
+   background: red;
+    height: 37px;
+}
+#dh li{
+    float: left;
+    margin-left: 20px;
+   line-height: 37px;
+}
+#zhuti{
+    margin: auto;
+    width: 990px;
+    height: 580px;
+    position: relative;
+}
+#menu{
+    float: left;
+
+}
+#menu h2{
+    background: blue;
+}
+#menu h2.d0{
+    background: blue;
+}
+#menu h2.d1{
+    background: greenyellow;
+}
+#menu h2.d2{
+    background: yellow;
+}
+#menu h2.d3{
+    background: cornflowerblue;
+}
+#menu h2.d4{
+    background: red;
+}
+#menu h2.d5{
+    background: palevioletred;
+}
+#menu1{
+    width: 186px;
+    height: 529px;
+
+    border: 1px solid black;
+}
+#menu1 h3{
+   text-indent: 10px;
+}
+#menu1 ul{
+    width: 165px;
+    height: 104px;
+    border-top: 1px dashed black;
+}
+#menu1  li{
+    float: left;
+    width: 79px;
+    height: 24px;
+   text-indent: 10px;
+    line-height: 24px;
+}
+#tu{
+    width: 550px;
+    height: 321px;
+    float: left;
+    overflow: hidden;
+    margin-left: 10px;
+    position: relative;
+}
+#hua{
+    width: 550px;
+    height: 42px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+#hua li{
+    width: 110px;
+    height: 42px;
+    float: left;
+    text-align: center;
+    background: black;
+    color: white;
+    opacity: 0.5;
+}
+#hua .selectedd{
+ background: cornflowerblue;
+}
+#img{
+    width:230px ;
+    height: 176px;
+    float: left;
+    margin-left: 10px;
+}
+#xw{
+    width:229px ;
+    height: 134px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+#xw .bt{
+    width: 229px;
+    height: 23px;
+}
+#xw .xw1{
+    border-top: 1px solid black;
+    width: 229px;
+    height: 126px;
+}
+
+#huod{
+    width: 790px;
+    height: 230px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+#huod .t{
+    width: 790px;
+    height: 30px;
+    border-bottom: 1px solid black;
+}
+#huod h2{
+   float: left;
+}
+#huod .t div{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+#T{
+    width: 3132px;
+    height: 200px;
+    text-indent: 10px;
+    position: absolute;
+    bottom:0;
+    left:0;
+
+}
+#ct{
+    width: 782px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+#T div{
+     width: 173px;
+     height: 188px;
+     float: left;
+     margin: 10px;
+ }
+#T span{
+    position: relative;
+    left: 40%;
+    bottom: 0;
+}
+#bottom{
+    width: 990px;
+    height: 53px;
+
+    float: left;
+}
+#bottom span{
+   margin-left: 35%;
+    line-height:53px;
+}
+

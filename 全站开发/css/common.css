@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    width: 1002px;
+    height: 120px;
+
+    margin: auto;
+}
+#img{
+    float: left;
+    margin-top: 36px;
+    margin-right: 146px;
+}
+#img a{
+    float: left;
+    width: 189px;
+    height: 50px;
+    background: url("../img/logo.gif")  no-repeat;
+
+}
+#nav li{
+    float: left;
+    margin-top: 53px;
+    border-right: 1px solid black;
+    padding: 0 23px;
+}
+#nav a{
+    color: #626262;
+}
+#nav a:hover{
+    color: #55c1ff ;
+}
+#nav li.last{
+    border-right: none;
+}
+#nav{
+   margin-left: 333px;
+    width: 540px;
+}
+#search{
+    float: right;
+    width: 136px;
+    height: 26px;
+    margin-top: 47px;
+    background: #f1f3f6;
+}
+#span{
+    float: right;
+    width:32px ;
+    height: 26px;
+    background: url("../img/logo2.gif") no-repeat;
+    background-position:  10px 10px;
+}
+#search .input{
+    width: 100px;
+    height: 26px;
+    text-indent: 10px;
+    float: left;
+    border: none;
+    background: #f1f3f6;
+    outline: none;
+    color: #55c1ff;
+}
+#baner{
+    width: 1003px;
+    height: 460px;
+    margin: 0 auto;
+    background: #31333f;
+    position: relative;
+}
+#pictuer {
+    margin: 0 auto;
+    width: 797px;
+    height: 460px;
+    overflow: hidden;
+}
+
+#xiaoyu{
+    width: 30px;
+    height: 60px;
+   position: absolute;
+    left: 0px;
+    top: 200px;
+    background: url("../img/cssjingling.png")  no-repeat;
+    background-position: 0px 0px;
+}
+
+#dayu{
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    right: 0px;
+    top: 200px;
+    background: url("../img/cssjingling.png")  no-repeat;
+    background-position: 0px -120px;
+}
+#news{
+    width: 1003px;
+    height: 492px;
+    background: #ffffff;
+    margin: auto;
+}
+#web{
+    width: 332px;
+    height: 492px;
+    float: left;
+    position: relative;
+
+}
+#social{
+    width: 332px;
+    height: 492px;
+    float: left;
+    position: relative;
+}
+#mobile{
+    width: 332px;
+    height: 492px;
+    float: left;
+    position: relative;
+}
+#web3{
+     width: 166px;
+     height: 36px;
+     margin: auto ;
+    margin-top: 88px;
+     text-align: center;
+     line-height: 36px;
+     font-size: 30px;
+ }
+#m3{
+    width: 166px;
+    height: 36px;
+    margin: auto ;
+    margin-top: 88px;
+    text-align: center;
+
+    line-height: 36px;
+    font-size: 30px;
+}
+#social3{
+    width: 166px;
+    height: 36px;
+    margin: auto ;
+    margin-top: 88px;
+    text-align: center;
+
+    line-height: 36px;
+    font-size: 30px;
+}
+#web1{
+    width: 100px;
+    height: 100px;
+    background: url("../img/logo11.png") no-repeat;
+    background-position: 0px 0px;
+    margin: auto;
+}
+
+#web2{
+    width: 318px;
+    height: 148px;
+    background: url("../img/logo11.png") no-repeat;
+    background-position: 0px -688px;
+    margin: auto;
+}
+#social1{
+    width: 100px;
+    height: 100px;
+    background: url("../img/logo11.png") no-repeat;
+    background-position: 0px -210px;
+    margin: auto;
+}
+
+#social2{
+    width: 318px;
+    height: 148px;
+    background: url("../img/logo11.png") no-repeat;
+    background-position: 0px -966px;
+    margin: auto;
+}#m1{
+     width: 100px;
+     height: 100px;
+     background: url("../img/logo11.png") no-repeat;
+     background-position: 0px -458px;
+     margin: auto;
+ }
+
+#m2{
+    width: 318px;
+    height: 148px;
+    background: url("../img/logo11.png") no-repeat;
+    background-position: 0px -1260px;
+    margin: auto;
+}
+#works{
+    width: 1003px;
+    height: 500px;
+    margin: auto;
+    background: #e2e7ed;
+}
+#pict div{
+    width: 250px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+#works .f{
+    font-size: 50px;
+    width: 260px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+#clients{
+    height: 154px;
+    width: 1003px;
+    background: #ffffff;
+    margin: auto;
+}
+#clients .c1{
+    font-size: 30px;
+    margin-top: 27px;
+    height: 68px;
+    position: relative;
+
+}
+#c2{
+    width: 868px;
+    height: 57px;
+    /*margin-left: 83px ;*/
+    position: absolute;
+    left: 83px;
+    overflow: hidden;
+}
+#c3{
+    width: 80px;
+    height: 57px;
+    position: absolute;
+    background: url("../img/cssjingling.png")  no-repeat;
+    background-position: 0px 0px;
+}
+#c4{
+    width: 80px;
+    height: 57px;
+    position: absolute;
+    right: 0px;
+    background: url("../img/cssjingling.png")  no-repeat;
+    background-position: 0px -120px;
+}

@@ -1,0 +1,320 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#zhuti{
+    margin: auto;
+    width: 990px;
+    height: 580px;
+    position: relative;
+}
+#header{
+    width: 990px;
+    height: 105px;
+
+    position: relative;
+    background: gray;
+}
+#header input{
+    position: absolute;
+    left: 200px;
+    top: 17px;
+    color: grey;
+}
+#skin{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 128px ;
+    height: 23px;
+    margin: 10px;
+    padding: 4px ;
+}
+#skin li{
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 4px;
+}
+#skin0{
+    background-image: url("../img/theme.gif") ;
+    background-repeat: no-repeat;
+}
+#skin1{
+    background-image: url("../img/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -20px 0 ;
+}
+#skin2{
+    background-image: url("../img/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -40px 0px ;
+}
+#skin3{
+    background-image: url("../img/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -60px 0px ;
+}
+#skin4{
+    background-image: url("../img/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -80px 0px ;
+}
+#skin5{
+    background-image: url("../img/theme.gif") ;
+    background-repeat: no-repeat;
+    background-position: -100px 0px ;
+}
+#skin0.c{
+    background-position: 0 -15px ;
+}
+#skin1.c{
+    background-position: -20px -15px ;
+}
+#skin2.c{
+    background-position: -40px -15px ;
+}
+#skin3.c{
+    background-position: -60px -15px ;
+}
+#skin4.c{
+    background-position:-80px -15px ;
+}
+#skin5.c{
+    background-position:-100px -15px ;
+}
+#dhk .d0{
+    background: blue;
+}
+#dhk .d1{
+    background: greenyellow;
+}
+#dhk .d2{
+    background: yellow;
+}
+#dhk .d3{
+    background: cornflowerblue;
+}
+#dhk .d4{
+    background: red;
+}
+#dhk .d5{
+    background: palevioletred;
+}
+#dh{
+    background: red;
+    height: 37px;
+}
+#dh li{
+    float: left;
+    margin-left: 20px;
+    line-height: 37px;
+}
+
+#menu{
+    position: relative;
+
+}
+#menu h2{
+    background: blue;
+}
+#menu h2.d0{
+    background: blue;
+}
+#menu h2.d1{
+    background: greenyellow;
+}
+#menu h2.d2{
+    background: yellow;
+}
+#menu h2.d3{
+    background: cornflowerblue;
+}
+#menu h2.d4{
+    background: red;
+}
+#menu h2.d5{
+    background: palevioletred;
+}
+#menu h2{
+    width: 187px;
+    height: 30px;
+}
+#menu1{
+    width: 186px;
+    height: 529px;
+
+    border: 1px solid black;
+}
+#menu1 h3{
+    text-indent: 10px;
+}
+#menu1 ul{
+    width: 165px;
+    height: 104px;
+    border-top: 1px dashed black;
+}
+#menu1  li{
+    float: left;
+    width: 79px;
+    height: 24px;
+    text-indent: 10px;
+    line-height: 24px;
+}
+#kuang{
+    position: relative;
+
+}
+#dierkuai{
+    width: 320px;
+    height: 630px;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+#disankuai{
+    width: 448px;
+    height: 630px;
+   position: absolute;
+    right: 0;
+    top: 0;
+}
+#xiaotu{
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-bottom: none;
+}
+#xiaoanniu{
+    width: 320px;
+    height: 40px;
+    background: url("../img/look.gif") 110px 10px no-repeat;
+}
+#tubiao{
+    width: 100%;
+    height: 80px;
+}
+#biao{
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+#biao li {
+    float: left;
+    width: 65px;
+    height: 62px;
+    margin-right: 10px;
+    border: 1px solid lightsteelblue;
+}
+#tubiao li{
+    float: left;
+    width: 65px;
+    height: 62px;
+    margin-right: 10px;
+    border: 1px solid lightsteelblue;
+}
+#b1{
+     background: url("../img/blue_one.jpg") -5px -5px no-repeat;
+ }
+#b2{
+    background: url("../img/blue_two.jpg") 0px 0px no-repeat;
+}
+#b3{
+    background: url("../img/blue_three.jpg") 0px 0px no-repeat;
+}
+#g1{
+    background: url("../img/green_one.jpg") -5px -5px no-repeat;
+}
+#g2{
+    background: url("../img/green_two.jpg") 0px 0px no-repeat;
+}
+#g3{
+    background: url("../img/blue_three.jpg") 0px 0px no-repeat;
+}#y1{
+     background: url("../img/yellow_one.jpg") -5px -5px no-repeat;
+ }
+#y2{
+    background: url("../img/yellow_two.jpg") 0px 0px no-repeat;
+}
+
+#biaotou li{
+    float: left;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-bottom: none;
+}
+#nr .selected{
+    display: block;
+}
+#nr div{
+    display: none;
+}
+#nr{
+    clear: both;
+    border: 1px solid black;
+}
+#x li{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+#x1{background: url("../img/blue.jpg") 0 0 no-repeat}
+#x2{background: url("../img/green.jpg") 0 0 no-repeat}
+#x3{background: url("../img/yellow.jpg") 0 0 no-repeat}
+#li3 .zi1{
+    color: red;
+    font-size: 40px;
+}
+#list .zi0{
+    text-decoration: line-through;
+}
+#li5{
+    clear: both;
+}
+#cc li{
+    width: 40px;
+    height: 40px;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+#li6{
+    clear: both;
+}
+#pj li{
+    float: left;
+    width: 16px;
+    height: 16px;
+}
+#pj li{
+    background: url("../img/star-matrix.gif") 0 0 no-repeat;
+}
+#pjk{
+    width: 448px;
+    height: 41px;
+}
+#biaotou li.selected{
+    background:cornflowerblue;
+}
+#drag{
+    width: 132px;
+    height: 132px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: black;
+    opacity: 0.3;
+    display: none;
+}
