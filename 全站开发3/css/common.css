@@ -171,6 +171,39 @@ a{
     position: relative;
 
 }
+#big-pic{
+    width: 320px;
+    height: 310px;
+    position: absolute;
+    top: 0px;
+    left: 520px;
+    overflow: hidden;
+    display: none;
+}
+#big-pic div{
+    position: absolute;
+    z-index: 222222;
+}
+#big-pic .z img{
+    position: absolute;
+
+}
+#p1 {
+    position: absolute;
+}
+
+
+#drag{
+    width: 132px;
+    height: 132px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: black;
+    opacity: 0.3;
+    display: none;
+    z-index: 9999;
+}
 #dierkuai{
     width: 320px;
     height: 630px;
@@ -191,6 +224,7 @@ a{
     overflow: hidden;
     border: 1px solid black;
     border-bottom: none;
+    position: relative;
 }
 #xiaoanniu{
     width: 320px;
@@ -264,6 +298,7 @@ a{
     width: 40px;
     height: 40px;
     float: left;
+    text-indent: -99999px;
 }
 
 #x1{background: url("../img/blue.jpg") 0 0 no-repeat}
@@ -307,14 +342,4 @@ a{
 }
 #biaotou li.selected{
     background:cornflowerblue;
-}
-#drag{
-    width: 132px;
-    height: 132px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background: black;
-    opacity: 0.3;
-    display: none;
 }

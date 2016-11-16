@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        #biao{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid black;
+            position: relative;
+            left: 400px;
+            top: 40px;
+            background: url("../img/1.jpg") -60px -60px no-repeat;
+        }
+        #hour{
+            height: 40px;
+            width: 6px;
+            background: black;
+            position: absolute;
+            left: 97px;
+            top: 60px;
+            -webkit-transform-origin: center bottom;
+        }
+        #min{
+            height: 60px;
+            width: 4px;
+            background: gray;
+            position: absolute;
+            left: 98px;
+            top: 40px;
+            -webkit-transform-origin: center bottom;
+        }
+        #s{
+            height: 80px;
+            width:2px;
+            background: red;
+            position: absolute;
+            left: 99px;
+            top: 20px;
+            -webkit-transform-origin: center bottom;
+        }
+        #dian{
+            width: 10px;
+            height: 10px;
+            background: red;
+            margin: 95px 95px;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+        
+        #kedu li{
+            background: black;
+            height: 4px;
+            width: 2px;
+            position: absolute;
+            top: 0px;
+            left: 99px;
+            -webkit-transform-origin: center 100px;
+        }
+        #kedu li:nth-child(5n+1){
+            height: 6px;
+            width: 3px;
+        }
+        #date{
+            height: 30px;
+            width: 30px;
+            background: gray;
+            position: absolute;
+            bottom: 20px;
+            left: 85px;;
+        }
+       /* #kedu li:nth-child(2){
+           -webkit-transform: rotate(6deg);
+            -webkit-transform-origin: center 100px;
+        }*/
+    </style>
+</head>
+<body>
+<div id="biao">
+        <ul id="kedu">
+
+        </ul>
+    <div id="dian"></div>
+    <div id="hour"></div>
+    <div id="min"></div>
+    <div id="s"></div>
+    <div id="date"></div>
+</div>
+<script>
+    var html='';
+    var os=document.getElementById('s'),
+            omin=document.getElementById('min'),
+            ohour=document.getElementById('hour');
+
+    var okedu=document.getElementById('kedu');
+        for(var i=0;i<60;i++){
+            html+="<li style='-webkit-transform: rotate("+i*6+"deg)'></li>";
+        }
+     okedu.innerHTML=html;
+        run();
+       var run=setInterval(run,1000)
+       function run(){
+        var date=new Date();
+        s=date.getSeconds();
+        min=date.getMinutes()+s/60;
+        hour=date.getHours()+min/60;
+        os.style.WebkitTransform= "rotate("+s*6+"deg)";
+        omin.style.WebkitTransform= "rotate("+min*6+"deg)";
+        ohour.style.WebkitTransform= "rotate("+hour*30+"deg)";
+    }
+    var odate=document.getElementById('date');
+    odate.innerHTML=new Date();
+
+</script>
+</body>
+</html>

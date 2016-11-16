@@ -58,4 +58,5 @@ $(function(){
           left:-$index*782
       },1000)
   })
+
 })

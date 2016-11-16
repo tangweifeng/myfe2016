@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            display: -webkit-flex;
+            flex-direction: column;
+
+            height: 500px;
+            width: 100px;
+            margin: auto;
+
+        }
+       #h{
+           background: red;
+           width: 100px;
+           height: 50px;
+       }
+        #b{
+            background: green;
+            -webkit-flex-grow: 1;
+        }
+        #f{
+            background: chocolate;
+            width: 100px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="h"></div>
+    <div id="b">
+        g
+    </div>
+    <div id="f"></div>
+</div>
+</body>
+</html>

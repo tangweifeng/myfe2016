@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+
+            background: black;
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: top;
+        }
+        #kuai{
+            width: 80px;
+            height: 80px;
+            -webkit-animation: xxx 5s linear infinite;
+            position: absolute;
+            top: 200px;
+            left: 500px;
+            -webkit-transform-style: preserve-3d;
+
+        }
+        @-webkit-keyframes xxx {
+               0%{}
+               100%{
+                   -webkit-transform:  rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+               }
+           }
+        #kuai div{
+            background: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            border: 1px solid black;
+            position: absolute;
+            opacity: 0.7;
+        }
+
+        .one{
+                -webkit-transform:  scale3d(3, 3 ,3) rotateX(90deg) translateZ(40px);
+        }
+        .two{
+            -webkit-transform:scale3d(3, 3 ,3)  translateZ(40px);
+        }
+        .three{
+            -webkit-transform:scale3d(3, 3 ,3) rotateY(-90deg) translateZ(40px);
+        }
+        .four{
+            -webkit-transform:scale3d(3, 3 ,3)  rotateY(180deg) translateZ(40px);
+        }
+        .five{
+            -webkit-transform:scale3d(3, 3 ,3)  rotateY(90deg) translateZ(40px);
+        }
+        .six{
+            -webkit-transform:scale3d(3, 3 ,3) rotateX(-90deg) translateZ(40px);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="kuai">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+</body>
+</html>
