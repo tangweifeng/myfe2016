@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 680px;
+            height: 344px;
+            position: relative;
+            margin: 50px auto;
+            -webkit-perspective: 800px;
+
+        }
+        #imgs{
+            width: 680px;
+            height: 344px;
+            position: absolute;
+        }
+        img{
+            position: absolute;
+            opacity: 0;
+            transform-origin: bottom;
+        }
+        #prev,#next{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            border-radius: 50%;
+            background: gray;
+            top: 50%;
+            margin-top: -30px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 40px;
+            cursor: pointer;
+            color: white;
+           -webkit-text-stroke-color: blue;
+
+        }
+        #prev{
+            left: -100px;
+        }
+        #next{
+            right: -100px;
+        }
+        .show{
+            -webkit-animation: show 1s ease forwards;
+        }
+        @-webkit-keyframes show {
+            from{
+                opacity: 0;
+                -webkit-transform: rotateX(180deg);
+                -moz-transform: rotateX(180deg);
+                -ms-transform: rotateX(180deg);
+                -o-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+            }
+            to{
+                opacity: 1;
+                -webkit-transform: rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+        }
+        .hide{
+            animation: hide 1s ease forwards;
+        }
+        @-webkit-keyframes hide {
+            from{
+                opacity: 1;
+                transform: rotateX(0deg);
+            }
+            to{
+                opacity: 0;
+                transform:rotateX(-180deg) ;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+        <img src="img/1.jpg" alt="" class="show">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    <span id="prev">&lt;</span>
+    <span id="next">&gt;</span>
+</div>
+<script>
+    var oPrev=document.getElementById('prev');
+    var oNext=document.getElementById('next');
+    var oImg=document.getElementsByTagName('img');
+    var index=0;
+    oNext.onclick=oPrev.onclick=function(){
+        if (this==oNext){
+            oImg[index].className='hide';
+            index++;
+
+            if(index==4){
+                index=0;
+            }
+            oImg[index].className='show';
+        }
+        else {
+            oImg[index].className='hide';
+            index--;
+            if(index==-1){
+                index=3;
+            }
+            oImg[index].className='show';
+        }
+    }
+</script>
+</body>
+</html>

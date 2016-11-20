@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 800px;
+            height: 800px;
+            position: relative;
+            margin: auto;
+            -webkit-perspective: 800px;
+            background: gray;
+            perspective-origin:center 100px;
+        }
+        #imgs{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+
+            -webkit-transform-style: preserve-3d;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+           -webkit-animation: xxx 10s linear 1s infinite;
+            /*transition: all 1s ;*/
+
+        }
+        @-webkit-keyframes xxx {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+        img{
+            position: absolute;
+            transition: all 1s ;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+        <!--<img src="imgages/未标题-1.png" alt="" style="-webkit-transform: rotateY(0deg) translateZ(300px);">
+        <img src="imgages/未标题-2.png" alt="" style="-webkit-transform: rotateY(40deg) translateZ(300px);">
+        <img src="imgages/未标题-3.png" alt="" style="-webkit-transform: rotateY(80deg) translateZ(300px);">
+        <img src="imgages/未标题-4.png" alt="" style="-webkit-transform: rotateY(120deg) translateZ(300px);">
+        <img src="imgages/未标题-5.png" alt="" style="-webkit-transform: rotateY(160deg) translateZ(300px);">
+        <img src="imgages/未标题-6.png" alt="" style="-webkit-transform: rotateY(200deg) translateZ(300px);">
+        <img src="imgages/未标题-7.png" alt="" style="-webkit-transform: rotateY(240deg) translateZ(300px);">
+        <img src="imgages/未标题-8.png" alt="" style="-webkit-transform: rotateY(280deg) translateZ(300px);">
+        <img src="imgages/未标题-9.png" alt="" style="-webkit-transform: rotateY(320deg) translateZ(300px);">-->
+    </div>
+</div>
+<script>
+    var aImg = document.getElementsByTagName('img');
+    var oImgs=document.getElementById('imgs');
+    var html='';
+    for(var i=1;i<10;i++){
+        html+="<img src=imgages/未标题-"+i+".png >";
+    }
+    oImgs.innerHTML=html;
+    for( var i=0;i<aImg.length;i++){
+        aImg[i].index=i;
+        aImg[i].onclick = function () {
+            oImgs.style.transform = "rotateY(" + (9-this.index )* 40 + "deg)";
+        }
+    }
+    var i=8;
+    var timer= setInterval(function(){
+        aImg[i].style.transform='rotateY('+(-i*40)+'deg) translateZ(300px)';
+        i--;
+        if (i==-1){
+            clearInterval(timer);
+        }
+    },100)
+</script>
+</body>
+</html>

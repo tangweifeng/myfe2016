@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮js</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+        #home{
+            position: absolute;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+             transition: all 1s;
+        }
+        .menu{
+            position: absolute;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <img src="imgs/close.png" alt="" class="menu">
+    <img src="imgs/full.png" alt="" class="menu">
+    <img src="imgs/open.png"alt="" class="menu">
+    <img src="imgs/prev.png" alt="" class="menu">
+    <img src="imgs/refresh.png" alt="" class="menu">
+    <div id="home"><img src="imgs/home.png" alt=""></div>
+</div>
+<script >
+    var aMenu=document.getElementsByClassName('menu');
+    var oHome=document.getElementById('home');
+
+    var bf=false;
+
+    oHome.onclick=function(){
+            if(!bf){
+                this.style.transform='rotate(360deg)';
+                for (var i=0;i<aMenu.length;i++){
+                    aMenu[i].style.webkitTransitionDelay=i*40+"ms";
+                    aMenu[i].style.WebkitTransform="translate("+ (-i)*50+"px,"+(i-4)*50+"px ) rotate(-360deg)";
+                }
+            }else{
+                this.style.transform='rotate(0deg)';
+                for (var i=0;i<aMenu.length;i++){
+                    aMenu[i].style.webkitTransitionDelay=(4-i)*40+"ms";
+                    aMenu[i].style.WebkitTransform="translate("+0+"px,"+0+"px ) rotate(0deg)";
+                }
+            }
+          bf=!bf;
+        }
+        for (var j=0;j<aMenu.length;j++){
+            aMenu[j].onclick=function(){
+                var currTransform = this.style.WebkitTransform;
+                this.style.transform=currTransform+' scale(2)';
+                var fn = function(){
+                    this.style.WebkitTransform = currTransform;
+                    this.removeEventListener('webkitTransitionEnd',fn);
+                };
+                this.addEventListener('webkitTransitionEnd',fn,false);
+            }
+
+        }
+
+
+</script>
+</body>
+</html>

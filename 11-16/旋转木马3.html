@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 800px;
+            height: 800px;
+            position: relative;
+            margin: auto;
+            -webkit-perspective: 800px;
+            background: gray;
+            perspective-origin:center 100px;
+        }
+        #imgs{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: red;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition:transform 1s ease-in;
+        }
+        .a1{
+            opacity: 1;
+            animation: x 0.1s ease 0.1s 1 forwards;
+        }
+        .a2{
+            animation: xx 0.1s ease 0.2s 1 forwards;
+        }
+        .a3{
+            animation: xxx 0.1s ease 0.3s 1 forwards;
+        }
+        .a4{
+            animation: xxxx 0.1s ease 0.4s 1 forwards;
+        }
+        .a5{
+             animation: xxxxx 0.1s ease 0.5s 1 forwards;
+         }
+        .a6{
+              animation: xxxxxx 0.1s ease 0.6s 1 forwards;
+          }
+        .a7{
+            animation: xxxxxxx 0.1s ease 0.7s 1 forwards;
+        }
+        .a8{
+            animation: xxxxxxxx 0.1s ease 0.8s 1 forwards;
+        }
+        .a9{
+            animation: xxxxxxxxx 0.1s ease 0.9s 1 forwards;
+        }
+
+        img{
+            position: absolute;
+            opacity: 0;
+        }
+        @-webkit-keyframes x {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(0deg) translateZ(300px);opacity: 1;
+
+            }
+        }
+        @-webkit-keyframes xx {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(40deg) translateZ(300px) ;opacity: 1;
+
+            }
+        }
+        @-webkit-keyframes xxx {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(80deg) translateZ(300px) ;opacity: 1;
+            }
+        }@-webkit-keyframes xxxx {
+             from{
+
+             }
+             to{
+                 -webkit-transform: rotateY(120deg) translateZ(300px) ;opacity: 1;
+             }
+         }@-webkit-keyframes xxxxx {
+              from{
+
+              }
+              to{
+                  -webkit-transform: rotateY(160deg) translateZ(300px) ;opacity: 1;
+              }
+          }@-webkit-keyframes xxxxxx {
+               from{
+
+               }
+               to{
+                   -webkit-transform: rotateY(200deg) translateZ(300px) ;opacity: 1;
+               }
+           }@-webkit-keyframes xxxxxxx {
+                 from{
+
+                 }
+                 to{
+                     -webkit-transform: rotateY(240deg) translateZ(300px) ;opacity: 1;
+                 }
+             }
+        @-webkit-keyframes xxxxxxxx {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(280deg) translateZ(300px) ;opacity: 1;
+            }
+        }
+        @-webkit-keyframes xxxxxxxxx {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(320deg) translateZ(300px) ;opacity: 1;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+        <img src="imgages/未标题-1.png" alt=""  class="a1">
+        <img src="imgages/未标题-2.png" alt="" class="a2">
+        <img src="imgages/未标题-3.png" alt=""  class="a3">
+        <img src="imgages/未标题-4.png" alt="" class="a4">
+        <img src="imgages/未标题-5.png" alt="" class="a5">
+        <img src="imgages/未标题-6.png" alt="" class="a6">
+        <img src="imgages/未标题-7.png" alt="" class="a7">
+        <img src="imgages/未标题-8.png" alt="" class="a8">
+        <img src="imgages/未标题-9.png" alt="" class="a9">
+    </div>
+</div>
+<script>
+    var aImg = document.getElementsByTagName('img');
+    var oImgs=document.getElementById('imgs');
+    for( var i=0;i<aImg.length;i++){
+        aImg[i].index=i;
+        aImg[i].onclick = function () {
+            oImgs.style.WebkitTransform = "rotateY(" + (9-this.index )* 40 + "deg)";
+        }
+    }
+
+</script>
+</body>
+</html>

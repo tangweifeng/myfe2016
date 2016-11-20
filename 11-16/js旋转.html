@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 800px;
+            height: 800px;
+            position: relative;
+            margin: auto;
+            -webkit-perspective: 800px;
+            background: gray;
+            perspective-origin:center 100px;
+        }
+        #imgs{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: red;
+            -webkit-transform-style: preserve-3d;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+        }
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+
+    </div>
+</div>
+<script>
+    var oImg = document.getElementsByTagName('img');
+    var oImgs=document.getElementById('imgs');
+    var html='';
+    for(var i=1;i<10;i++){
+        html+="<img src=imgages/未标题-"+i+".png style='-webkit-transform: rotateY("+(i-1)*40+"deg) translateZ(300px);'>";
+    }
+    oImgs.innerHTML=html;
+    for( var i=0;i<oImg.length;i++){
+        oImg[i].index=i;
+        oImg[i].onclick = function () {
+            oImgs.style.transform = "rotateY(" + (9-this.index )* 40 + "deg)";
+        }
+    }
+
+</script>
+</body>
+</html>
